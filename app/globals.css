@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-mint: #3ddc97;
+  --color-mint-dark: #22b07a;
+  --color-mint-soft: #d9f5e8;
+  --color-ink: #121417;
+  --color-panel: #1a1d21;
+  --color-panel-2: #22262c;
+  --color-line: #2b2f36;
+  --color-paper: #f6f7f5;
+  --color-paper-panel: #ffffff;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Thin, unobtrusive scrollbars for game boards */
+.scroll-thin {
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
