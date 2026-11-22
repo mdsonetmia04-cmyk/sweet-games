@@ -1,11 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Heart, Play, Trophy, Users } from "lucide-react";
 import type { GameMeta } from "@/types/game";
 import { usePrefs } from "@/lib/store";
 import { sfx } from "@/lib/sound";
-import GameIcon from "@/components/shared/GameIcon";
 
 export default function GameCard({ game }: { game: GameMeta }) {
   const isFav = usePrefs((s) => s.favorites.includes(game.slug));
@@ -21,17 +21,20 @@ export default function GameCard({ game }: { game: GameMeta }) {
         tabIndex={-1}
       >
         <div
-          className="flex h-full w-full items-center justify-center transition-transform duration-300 group-hover:scale-[1.03]"
+          className="h-full w-full transition-transform duration-300 group-hover:scale-[1.03]"
           style={{ backgroundColor: game.color }}
         >
-          <GameIcon
-            icon={game.icon}
-            className="h-16 w-16 text-white/90"
+          <Image
+            src={game.thumbnail}
+            alt={`${game.name} thumbnail`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+            className="object-cover"
           />
-          <span className="absolute bottom-2 left-3 rounded-full bg-black/25 px-2 py-0.5 text-[11px] font-semibold text-white">
-            {game.category} Games
-          </span>
         </div>
+        <span className="absolute bottom-2 left-3 rounded-full bg-black/25 px-2 py-0.5 text-[11px] font-semibold text-white">
+          {game.category} Games
+        </span>
       </Link>
 
       <div className="flex flex-1 flex-col p-4">

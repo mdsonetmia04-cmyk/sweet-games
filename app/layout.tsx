@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -10,7 +10,13 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://sweetgames.app";
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
+const SITE_URL = "https://sweetplay.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -73,7 +79,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`dark ${geistSans.variable} h-full`} suppressHydrationWarning>
+    <html lang="en" className={`dark ${geistSans.variable} ${spaceGrotesk.variable} h-full`} suppressHydrationWarning>
       <head>
         {/* Apply the saved theme before first paint to avoid a flash. */}
         <script

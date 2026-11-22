@@ -18,6 +18,7 @@ export const CATEGORIES: { name: GameCategory; blurb: string }[] = [
 export const GAMES: GameMeta[] = [
   {
     slug: "ludo",
+    thumbnail: "/games/thumbnails/ludo.jpg",
     name: "Ludo Classic",
     tagline: "Race all four tokens home first.",
     description:
@@ -43,6 +44,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "chess",
+    thumbnail: "/games/thumbnails/chess.jpg",
     name: "Chess Master",
     tagline: "The royal game, with a friendly AI.",
     description:
@@ -67,6 +69,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "snake",
+    thumbnail: "/games/thumbnails/snake.jpg",
     name: "Snake Arena",
     tagline: "Eat, grow, don't crash.",
     description:
@@ -92,6 +95,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "2048",
+    thumbnail: "/games/thumbnails/2048.jpg",
     name: "2048 Puzzle",
     tagline: "Slide, merge, reach 2048.",
     description:
@@ -117,6 +121,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "tic-tac-toe",
+    thumbnail: "/games/thumbnails/tic-tac-toe.jpg",
     name: "Tic Tac Toe",
     tagline: "Three in a row wins.",
     description:
@@ -138,6 +143,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "block-drop",
+    thumbnail: "/games/thumbnails/block-drop.jpg",
     name: "Block Drop",
     tagline: "Stack the falling blocks.",
     description:
@@ -165,6 +171,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "connect-four",
+    thumbnail: "/games/thumbnails/connect-four.jpg",
     name: "Connect Four",
     tagline: "Drop in. Line up four.",
     description:
@@ -186,6 +193,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "sudoku",
+    thumbnail: "/games/thumbnails/sudoku.jpg",
     name: "Sudoku",
     tagline: "Every row, column and box.",
     description:
@@ -211,6 +219,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "minesweeper",
+    thumbnail: "/games/thumbnails/minesweeper.jpg",
     name: "Mine Sweeper",
     tagline: "Clear the field, dodge the mines.",
     description:
@@ -236,6 +245,7 @@ export const GAMES: GameMeta[] = [
   },
   {
     slug: "brick-breaker",
+    thumbnail: "/games/thumbnails/brick-breaker.jpg",
     name: "Brick Breaker",
     tagline: "Smash every brick.",
     description:
